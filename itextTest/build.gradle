@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'com.gaochen'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //itextpdf 与itext-asian版本需要进行匹配，不然会报错com.itextpdf.text.DocumentException_ Font 'STSong-Light' with 'UniGB-UCS2-H'
+    compile group: 'com.itextpdf', name: 'itextpdf', version: '5.4.3'
+    compile group: 'com.itextpdf', name: 'itext-asian', version: '5.2.0'
+    //使用jfreechart导出图表
+    compile group: 'org.jfree', name: 'jcommon', version: '1.0.17'
+    compile group: 'org.jfree', name: 'jfreechart', version: '1.0.17'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

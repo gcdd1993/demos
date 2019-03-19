@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:2.0.0.RC1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server/2.0.0.RC1/371f8d24fd9bea808e662e598c5f34fda9de1f0d/spring-cloud-starter-netflix-eureka-server-2.0.0.RC1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server/2.0.0.RC1/da282ac6f932a90d21c8da7b3bb36a4600bb4170/spring-cloud-starter-netflix-eureka-server-2.0.0.RC1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

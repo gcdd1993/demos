@@ -1,0 +1,29 @@
+buildscript {
+    ext {
+        springVersion = '4.3.18.RELEASE'
+    }
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+group 'com.gcdd'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.springframework:spring-core:${springVersion}"
+    compile "org.springframework:spring-context:${springVersion}"
+    compile "org.springframework:spring-web:${springVersion}"
+    compile "org.springframework:spring-jdbc:${springVersion}"
+    compile "org.springframework:spring-tx:${springVersion}"
+    compile "org.springframework:spring-webmvc:${springVersion}"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
