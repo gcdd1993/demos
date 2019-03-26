@@ -18,3 +18,5 @@ include 'demo-spring-event',
         'demo-reflect',
         'demo-scala',
         'demo-spring-source-analysis'
+include 'demo-headless-chrome'
+

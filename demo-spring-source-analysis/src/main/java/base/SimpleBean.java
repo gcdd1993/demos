@@ -8,4 +8,10 @@ public class SimpleBean {
     public void send() {
         System.out.println("Hello Spring Bean!");
     }
+
+    public static class InnerBean {
+        public void innerSend() {
+            System.out.println("hello inner bean !");
+        }
+    }
 }

@@ -7,4 +7,8 @@
 						http://www.springframework.org/schema/context
 						http://www.springframework.org/schema/context/spring-context.xsd">
     <bean id="simple" class="base.SimpleBeanFactoryBean"/>
+    <bean id="inner" class="base.SimpleBean$InnerBean"/>
+    <bean class="base.MyBeanPostProcessor"/>
+
+    <bean id="life-cycle-bean" class="base.LifecycleBean"/>
 </beans>

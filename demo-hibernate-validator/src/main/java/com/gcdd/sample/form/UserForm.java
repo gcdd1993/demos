@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -39,5 +40,8 @@ public class UserForm {
 
     @Size(min = 50, max = 100)
     private String testSize;
+
+    @Size(min = 2)
+    private List<String> list;
 
 }
