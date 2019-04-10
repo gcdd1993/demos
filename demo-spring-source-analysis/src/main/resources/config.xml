@@ -2,13 +2,19 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 						http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/context
-						http://www.springframework.org/schema/context/spring-context.xsd">
-    <bean id="simple" class="base.SimpleBeanFactoryBean"/>
-    <bean id="inner" class="base.SimpleBean$InnerBean"/>
-    <bean class="base.MyBeanPostProcessor"/>
-
-    <bean id="life-cycle-bean" class="base.LifecycleBean"/>
+						http://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/aop
+                        http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <bean id="simpleTransfer" class="com.gcdd1993.spring.framework.aop.SimpleTransfer"/>
+    <bean id="notVeryUsefulAspect" class="com.gcdd1993.spring.framework.aop.NotVeryUsefulAspect"/>
+    <aop:config>
+        <aop:aspect id="notVeryUsefulAspectAspect" ref="notVeryUsefulAspect">
+            <aop:pointcut id="simplePointcut" expression="execution(* transfer(..))"/>
+            <aop:before method="anyOldTransfer" pointcut-ref="simplePointcut"/>
+        </aop:aspect>
+    </aop:config>
 </beans>
